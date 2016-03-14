@@ -18,10 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbh-wm-PSh">
-                                <rect key="frame" x="98" y="95" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="87" y="95" width="68" height="30"/>
+                                <state key="normal" title="fullscreen"/>
                                 <connections>
                                     <segue destination="7um-Nm-xdD" kind="show" identifier="toSecondVC" id="iQT-uy-4cz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeQ-hB-yJQ">
+                                <rect key="frame" x="90" y="169" width="62" height="30"/>
+                                <state key="normal" title="YYModel"/>
+                                <connections>
+                                    <segue destination="8ha-0J-hgt" kind="show" id="TNi-gJ-5vu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -32,6 +39,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1928" y="354"/>
+        </scene>
+        <!--Model Test View Controller-->
+        <scene sceneID="4Qb-H6-w2K">
+            <objects>
+                <viewController id="8ha-0J-hgt" customClass="YYModelTestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qyG-An-YXZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="zrk-AO-z2A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XRh-rc-OFE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uau-fB-chb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="1034"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="qSP-q6-p31">

@@ -13,9 +13,12 @@
 		E5340B191C9661AD00205879 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5340B171C9661AD00205879 /* Main.storyboard */; };
 		E5340B1B1C9661AD00205879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5340B1A1C9661AD00205879 /* Assets.xcassets */; };
 		E5340B1E1C9661AD00205879 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5340B1C1C9661AD00205879 /* LaunchScreen.storyboard */; };
-		E5340B281C968FD400205879 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B271C968FD400205879 /* ViewController.m */; };
-		E5340B2B1C968FEA00205879 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B2A1C968FEA00205879 /* SecondViewController.m */; };
 		E5340B341C969E9900205879 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B331C969E9900205879 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		E5340B3D1C96A72900205879 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B391C96A72900205879 /* SecondViewController.m */; };
+		E5340B3E1C96A72900205879 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B3B1C96A72900205879 /* ViewController.m */; };
+		E5340B411C96AA0500205879 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B401C96AA0500205879 /* User.m */; };
+		E5340B441C96AB2200205879 /* YYModelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B431C96AB2200205879 /* YYModelTestViewController.m */; };
+		E5340B471C96B0B400205879 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B461C96B0B400205879 /* Dog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,13 +33,19 @@
 		E5340B1A1C9661AD00205879 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5340B1D1C9661AD00205879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5340B1F1C9661AD00205879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5340B261C968FD400205879 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E5340B271C968FD400205879 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E5340B291C968FEA00205879 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		E5340B2A1C968FEA00205879 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E5340B2C1C96905900205879 /* YRDGoodArcPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDGoodArcPrefixHeader.pch; sourceTree = "<group>"; };
 		E5340B321C969E9900205879 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		E5340B331C969E9900205879 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		E5340B381C96A72900205879 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		E5340B391C96A72900205879 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		E5340B3A1C96A72900205879 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E5340B3B1C96A72900205879 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E5340B3F1C96AA0500205879 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E5340B401C96AA0500205879 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E5340B421C96AB2200205879 /* YYModelTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModelTestViewController.h; sourceTree = "<group>"; };
+		E5340B431C96AB2200205879 /* YYModelTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYModelTestViewController.m; sourceTree = "<group>"; };
+		E5340B451C96B0B400205879 /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		E5340B461C96B0B400205879 /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +98,8 @@
 		E5340B0D1C9661AD00205879 /* YRDGoodArc */ = {
 			isa = PBXGroup;
 			children = (
+				E5340B361C96A72900205879 /* Demos */,
 				E5340B301C969D1200205879 /* Vendors */,
-				E5340B251C968FD400205879 /* FDFullScreenUseDemo */,
 				E5340B111C9661AD00205879 /* AppDelegate.h */,
 				E5340B121C9661AD00205879 /* AppDelegate.m */,
 				E5340B171C9661AD00205879 /* Main.storyboard */,
@@ -111,17 +120,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E5340B251C968FD400205879 /* FDFullScreenUseDemo */ = {
-			isa = PBXGroup;
-			children = (
-				E5340B261C968FD400205879 /* ViewController.h */,
-				E5340B271C968FD400205879 /* ViewController.m */,
-				E5340B291C968FEA00205879 /* SecondViewController.h */,
-				E5340B2A1C968FEA00205879 /* SecondViewController.m */,
-			);
-			path = FDFullScreenUseDemo;
-			sourceTree = "<group>";
-		};
 		E5340B301C969D1200205879 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +135,39 @@
 				E5340B331C969E9900205879 /* UINavigationController+FDFullscreenPopGesture.m */,
 			);
 			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
+		E5340B361C96A72900205879 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				E5340B371C96A72900205879 /* FDFullScreenUseDemo */,
+				E5340B3C1C96A72900205879 /* YYModelDemo */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		E5340B371C96A72900205879 /* FDFullScreenUseDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E5340B381C96A72900205879 /* SecondViewController.h */,
+				E5340B391C96A72900205879 /* SecondViewController.m */,
+				E5340B3A1C96A72900205879 /* ViewController.h */,
+				E5340B3B1C96A72900205879 /* ViewController.m */,
+			);
+			path = FDFullScreenUseDemo;
+			sourceTree = "<group>";
+		};
+		E5340B3C1C96A72900205879 /* YYModelDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E5340B3F1C96AA0500205879 /* User.h */,
+				E5340B401C96AA0500205879 /* User.m */,
+				E5340B421C96AB2200205879 /* YYModelTestViewController.h */,
+				E5340B431C96AB2200205879 /* YYModelTestViewController.m */,
+				E5340B451C96B0B400205879 /* Dog.h */,
+				E5340B461C96B0B400205879 /* Dog.m */,
+			);
+			path = YYModelDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,11 +291,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5340B3D1C96A72900205879 /* SecondViewController.m in Sources */,
+				E5340B441C96AB2200205879 /* YYModelTestViewController.m in Sources */,
+				E5340B471C96B0B400205879 /* Dog.m in Sources */,
 				E5340B341C969E9900205879 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
-				E5340B2B1C968FEA00205879 /* SecondViewController.m in Sources */,
-				E5340B281C968FD400205879 /* ViewController.m in Sources */,
+				E5340B411C96AA0500205879 /* User.m in Sources */,
 				E5340B131C9661AD00205879 /* AppDelegate.m in Sources */,
 				E5340B101C9661AD00205879 /* main.m in Sources */,
+				E5340B3E1C96A72900205879 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
