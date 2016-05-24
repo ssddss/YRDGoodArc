@@ -13,7 +13,7 @@ pod 'UITableView+FDTemplateLayoutCell'
 pod 'MBProgressHUD', '~> 0.9.2'
 pod 'AsyncDisplayKit'
 pod 'MJRefresh'
-
+pod 'MWPhotoBrowser'
 end
 
 

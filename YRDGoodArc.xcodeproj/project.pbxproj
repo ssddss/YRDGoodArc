@@ -19,6 +19,34 @@
 		E5340B411C96AA0500205879 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B401C96AA0500205879 /* User.m */; };
 		E5340B441C96AB2200205879 /* YYModelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B431C96AB2200205879 /* YYModelTestViewController.m */; };
 		E5340B471C96B0B400205879 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B461C96B0B400205879 /* Dog.m */; };
+		E5340B4B1C970F1500205879 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B4A1C970F1500205879 /* AFAppDotNetAPIClient.m */; };
+		E5340B4E1C970F4B00205879 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B4D1C970F4B00205879 /* Request.m */; };
+		E5340B511C97103300205879 /* AFNDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B501C97103300205879 /* AFNDemoViewController.m */; };
+		E5500F411CF4236400A2169D /* YRDServiceYiBaoGao.m in Sources */ = {isa = PBXBuildFile; fileRef = E5500F3D1CF4236400A2169D /* YRDServiceYiBaoGao.m */; };
+		E5500F421CF4236400A2169D /* WeatherService.m in Sources */ = {isa = PBXBuildFile; fileRef = E5500F401CF4236400A2169D /* WeatherService.m */; };
+		E598AC681CEEF2C400294141 /* YRDUDIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC671CEEF2C400294141 /* YRDUDIDGenerator.m */; };
+		E598AC6C1CEEFAF400294141 /* NSDictionary+YRDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC6B1CEEFAF400294141 /* NSDictionary+YRDNetworkingMethods.m */; };
+		E598AC6F1CEEFB0E00294141 /* NSObject+YRDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC6E1CEEFB0E00294141 /* NSObject+YRDNetworkingMethods.m */; };
+		E598AC721CEEFBF200294141 /* NSArray+YRDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC711CEEFBF200294141 /* NSArray+YRDNetworkingMethods.m */; };
+		E598AC751CEEFF3000294141 /* NSString+YRDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC741CEEFF3000294141 /* NSString+YRDNetworkingMethods.m */; };
+		E598AC781CEF011700294141 /* NSMutableString+YRDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC771CEF011700294141 /* NSMutableString+YRDNetworkingMethods.m */; };
+		E598AC7B1CEF07C800294141 /* NSURLRequest+YRDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC7A1CEF07C800294141 /* NSURLRequest+YRDNetworkingMethods.m */; };
+		E598AC7E1CEF084400294141 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC7D1CEF084400294141 /* UIDevice+IdentifierAddition.m */; };
+		E598AC811CF2A4C800294141 /* YRDSignatureGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC801CF2A4C800294141 /* YRDSignatureGenerator.m */; };
+		E598AC8C1CF2A5D900294141 /* YRDService.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC8B1CF2A5D900294141 /* YRDService.m */; };
+		E598AC8F1CF2A7DB00294141 /* YRDServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC8E1CF2A7DB00294141 /* YRDServiceFactory.m */; };
+		E598AC9D1CF2B17F00294141 /* YRDCachedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC9C1CF2B17F00294141 /* YRDCachedObject.m */; };
+		E598ACA01CF2B36700294141 /* YRDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC9F1CF2B36700294141 /* YRDCache.m */; };
+		E598ACA41CF2DBCF00294141 /* YRDLoggerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = E598ACA31CF2DBCF00294141 /* YRDLoggerConfiguration.m */; };
+		E598ACA71CF2E48400294141 /* YRDLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E598ACA61CF2E48400294141 /* YRDLogger.m */; };
+		E598ACAA1CF2E7B200294141 /* YRDCommonParamsGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E598ACA91CF2E7B200294141 /* YRDCommonParamsGenerator.m */; };
+		E598ACAD1CF2E91A00294141 /* YRDRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E598ACAC1CF2E91A00294141 /* YRDRequestGenerator.m */; };
+		E598ACB91CF3039800294141 /* YRDURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E598ACB51CF3039800294141 /* YRDURLResponse.m */; };
+		E598ACBA1CF3039800294141 /* YRDAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E598ACB71CF3039800294141 /* YRDAppContext.m */; };
+		E598ACBD1CF303EC00294141 /* YRDApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = E598ACBC1CF303EC00294141 /* YRDApiProxy.m */; };
+		E598ACC01CF30C3500294141 /* YRDAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E598ACBF1CF30C3500294141 /* YRDAPIBaseManager.m */; };
+		E598ACCA1CF405E100294141 /* WeatherApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E598ACC91CF405E100294141 /* WeatherApiManager.m */; };
+		E598ACCD1CF4069B00294141 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E598ACCC1CF4069B00294141 /* WeatherViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +74,64 @@
 		E5340B431C96AB2200205879 /* YYModelTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYModelTestViewController.m; sourceTree = "<group>"; };
 		E5340B451C96B0B400205879 /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		E5340B461C96B0B400205879 /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		E5340B491C970F1500205879 /* AFAppDotNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAppDotNetAPIClient.h; sourceTree = "<group>"; };
+		E5340B4A1C970F1500205879 /* AFAppDotNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAppDotNetAPIClient.m; sourceTree = "<group>"; };
+		E5340B4C1C970F4B00205879 /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
+		E5340B4D1C970F4B00205879 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
+		E5340B4F1C97103300205879 /* AFNDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNDemoViewController.h; sourceTree = "<group>"; };
+		E5340B501C97103300205879 /* AFNDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNDemoViewController.m; sourceTree = "<group>"; };
+		E5500F3C1CF4236400A2169D /* YRDServiceYiBaoGao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDServiceYiBaoGao.h; sourceTree = "<group>"; };
+		E5500F3D1CF4236400A2169D /* YRDServiceYiBaoGao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDServiceYiBaoGao.m; sourceTree = "<group>"; };
+		E5500F3F1CF4236400A2169D /* WeatherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherService.h; sourceTree = "<group>"; };
+		E5500F401CF4236400A2169D /* WeatherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherService.m; sourceTree = "<group>"; };
+		E598AC641CEEBE9400294141 /* YRDNetworkingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDNetworkingConfiguration.h; sourceTree = "<group>"; };
+		E598AC661CEEF2C400294141 /* YRDUDIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDUDIDGenerator.h; sourceTree = "<group>"; };
+		E598AC671CEEF2C400294141 /* YRDUDIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDUDIDGenerator.m; sourceTree = "<group>"; };
+		E598AC6A1CEEFAF400294141 /* NSDictionary+YRDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YRDNetworkingMethods.h"; sourceTree = "<group>"; };
+		E598AC6B1CEEFAF400294141 /* NSDictionary+YRDNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YRDNetworkingMethods.m"; sourceTree = "<group>"; };
+		E598AC6D1CEEFB0E00294141 /* NSObject+YRDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YRDNetworkingMethods.h"; sourceTree = "<group>"; };
+		E598AC6E1CEEFB0E00294141 /* NSObject+YRDNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YRDNetworkingMethods.m"; sourceTree = "<group>"; };
+		E598AC701CEEFBF200294141 /* NSArray+YRDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YRDNetworkingMethods.h"; sourceTree = "<group>"; };
+		E598AC711CEEFBF200294141 /* NSArray+YRDNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YRDNetworkingMethods.m"; sourceTree = "<group>"; };
+		E598AC731CEEFF3000294141 /* NSString+YRDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YRDNetworkingMethods.h"; sourceTree = "<group>"; };
+		E598AC741CEEFF3000294141 /* NSString+YRDNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YRDNetworkingMethods.m"; sourceTree = "<group>"; };
+		E598AC761CEF011700294141 /* NSMutableString+YRDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+YRDNetworkingMethods.h"; sourceTree = "<group>"; };
+		E598AC771CEF011700294141 /* NSMutableString+YRDNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+YRDNetworkingMethods.m"; sourceTree = "<group>"; };
+		E598AC791CEF07C800294141 /* NSURLRequest+YRDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+YRDNetworkingMethods.h"; sourceTree = "<group>"; };
+		E598AC7A1CEF07C800294141 /* NSURLRequest+YRDNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+YRDNetworkingMethods.m"; sourceTree = "<group>"; };
+		E598AC7C1CEF084400294141 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
+		E598AC7D1CEF084400294141 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
+		E598AC7F1CF2A4C800294141 /* YRDSignatureGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDSignatureGenerator.h; sourceTree = "<group>"; };
+		E598AC801CF2A4C800294141 /* YRDSignatureGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDSignatureGenerator.m; sourceTree = "<group>"; };
+		E598AC8A1CF2A5D900294141 /* YRDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDService.h; sourceTree = "<group>"; };
+		E598AC8B1CF2A5D900294141 /* YRDService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDService.m; sourceTree = "<group>"; };
+		E598AC8D1CF2A7DB00294141 /* YRDServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDServiceFactory.h; sourceTree = "<group>"; };
+		E598AC8E1CF2A7DB00294141 /* YRDServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDServiceFactory.m; sourceTree = "<group>"; };
+		E598AC9B1CF2B17F00294141 /* YRDCachedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDCachedObject.h; sourceTree = "<group>"; };
+		E598AC9C1CF2B17F00294141 /* YRDCachedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDCachedObject.m; sourceTree = "<group>"; };
+		E598AC9E1CF2B36700294141 /* YRDCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDCache.h; sourceTree = "<group>"; };
+		E598AC9F1CF2B36700294141 /* YRDCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDCache.m; sourceTree = "<group>"; };
+		E598ACA21CF2DBCF00294141 /* YRDLoggerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDLoggerConfiguration.h; sourceTree = "<group>"; };
+		E598ACA31CF2DBCF00294141 /* YRDLoggerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDLoggerConfiguration.m; sourceTree = "<group>"; };
+		E598ACA51CF2E48400294141 /* YRDLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDLogger.h; sourceTree = "<group>"; };
+		E598ACA61CF2E48400294141 /* YRDLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDLogger.m; sourceTree = "<group>"; };
+		E598ACA81CF2E7B200294141 /* YRDCommonParamsGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDCommonParamsGenerator.h; sourceTree = "<group>"; };
+		E598ACA91CF2E7B200294141 /* YRDCommonParamsGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDCommonParamsGenerator.m; sourceTree = "<group>"; };
+		E598ACAB1CF2E91A00294141 /* YRDRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDRequestGenerator.h; sourceTree = "<group>"; };
+		E598ACAC1CF2E91A00294141 /* YRDRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDRequestGenerator.m; sourceTree = "<group>"; };
+		E598ACAE1CF2ED2C00294141 /* YRDNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDNetworking.h; sourceTree = "<group>"; };
+		E598ACB51CF3039800294141 /* YRDURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDURLResponse.m; sourceTree = "<group>"; };
+		E598ACB61CF3039800294141 /* YRDURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDURLResponse.h; sourceTree = "<group>"; };
+		E598ACB71CF3039800294141 /* YRDAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDAppContext.m; sourceTree = "<group>"; };
+		E598ACB81CF3039800294141 /* YRDAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDAppContext.h; sourceTree = "<group>"; };
+		E598ACBB1CF303EC00294141 /* YRDApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDApiProxy.h; sourceTree = "<group>"; };
+		E598ACBC1CF303EC00294141 /* YRDApiProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDApiProxy.m; sourceTree = "<group>"; };
+		E598ACBE1CF30C3500294141 /* YRDAPIBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDAPIBaseManager.h; sourceTree = "<group>"; };
+		E598ACBF1CF30C3500294141 /* YRDAPIBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDAPIBaseManager.m; sourceTree = "<group>"; };
+		E598ACC81CF405E100294141 /* WeatherApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherApiManager.h; sourceTree = "<group>"; };
+		E598ACC91CF405E100294141 /* WeatherApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherApiManager.m; sourceTree = "<group>"; };
+		E598ACCB1CF4069B00294141 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		E598ACCC1CF4069B00294141 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +184,7 @@
 		E5340B0D1C9661AD00205879 /* YRDGoodArc */ = {
 			isa = PBXGroup;
 			children = (
+				E598AC621CEDB23300294141 /* Components */,
 				E5340B361C96A72900205879 /* Demos */,
 				E5340B301C969D1200205879 /* Vendors */,
 				E5340B111C9661AD00205879 /* AppDelegate.h */,
@@ -140,6 +227,8 @@
 		E5340B361C96A72900205879 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				E598ACC11CF404F500294141 /* HTTPDemo */,
+				E5340B481C970EFD00205879 /* AFNetworkingDemo */,
 				E5340B371C96A72900205879 /* FDFullScreenUseDemo */,
 				E5340B3C1C96A72900205879 /* YYModelDemo */,
 			);
@@ -168,6 +257,173 @@
 				E5340B461C96B0B400205879 /* Dog.m */,
 			);
 			path = YYModelDemo;
+			sourceTree = "<group>";
+		};
+		E5340B481C970EFD00205879 /* AFNetworkingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E5340B491C970F1500205879 /* AFAppDotNetAPIClient.h */,
+				E5340B4A1C970F1500205879 /* AFAppDotNetAPIClient.m */,
+				E5340B4C1C970F4B00205879 /* Request.h */,
+				E5340B4D1C970F4B00205879 /* Request.m */,
+				E5340B4F1C97103300205879 /* AFNDemoViewController.h */,
+				E5340B501C97103300205879 /* AFNDemoViewController.m */,
+			);
+			path = AFNetworkingDemo;
+			sourceTree = "<group>";
+		};
+		E5500F3B1CF4236400A2169D /* YBGService */ = {
+			isa = PBXGroup;
+			children = (
+				E5500F3C1CF4236400A2169D /* YRDServiceYiBaoGao.h */,
+				E5500F3D1CF4236400A2169D /* YRDServiceYiBaoGao.m */,
+			);
+			path = YBGService;
+			sourceTree = "<group>";
+		};
+		E5500F3E1CF4236400A2169D /* WeatherService */ = {
+			isa = PBXGroup;
+			children = (
+				E5500F3F1CF4236400A2169D /* WeatherService.h */,
+				E5500F401CF4236400A2169D /* WeatherService.m */,
+			);
+			path = WeatherService;
+			sourceTree = "<group>";
+		};
+		E598AC621CEDB23300294141 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E598AC631CEDB23300294141 /* HTTP */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E598AC631CEDB23300294141 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				E598AC931CF2ADBE00294141 /* Components */,
+				E598AC891CF2A5B600294141 /* Services */,
+				E598AC691CEEF71F00294141 /* Categories */,
+				E598AC651CEEF2A100294141 /* Assistants */,
+				E598AC641CEEBE9400294141 /* YRDNetworkingConfiguration.h */,
+				E598ACAE1CF2ED2C00294141 /* YRDNetworking.h */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		E598AC651CEEF2A100294141 /* Assistants */ = {
+			isa = PBXGroup;
+			children = (
+				E598AC661CEEF2C400294141 /* YRDUDIDGenerator.h */,
+				E598AC671CEEF2C400294141 /* YRDUDIDGenerator.m */,
+				E598AC7F1CF2A4C800294141 /* YRDSignatureGenerator.h */,
+				E598AC801CF2A4C800294141 /* YRDSignatureGenerator.m */,
+				E598ACA81CF2E7B200294141 /* YRDCommonParamsGenerator.h */,
+				E598ACA91CF2E7B200294141 /* YRDCommonParamsGenerator.m */,
+				E598ACAB1CF2E91A00294141 /* YRDRequestGenerator.h */,
+				E598ACAC1CF2E91A00294141 /* YRDRequestGenerator.m */,
+			);
+			path = Assistants;
+			sourceTree = "<group>";
+		};
+		E598AC691CEEF71F00294141 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E598AC6A1CEEFAF400294141 /* NSDictionary+YRDNetworkingMethods.h */,
+				E598AC6B1CEEFAF400294141 /* NSDictionary+YRDNetworkingMethods.m */,
+				E598AC6D1CEEFB0E00294141 /* NSObject+YRDNetworkingMethods.h */,
+				E598AC6E1CEEFB0E00294141 /* NSObject+YRDNetworkingMethods.m */,
+				E598AC701CEEFBF200294141 /* NSArray+YRDNetworkingMethods.h */,
+				E598AC711CEEFBF200294141 /* NSArray+YRDNetworkingMethods.m */,
+				E598AC731CEEFF3000294141 /* NSString+YRDNetworkingMethods.h */,
+				E598AC741CEEFF3000294141 /* NSString+YRDNetworkingMethods.m */,
+				E598AC761CEF011700294141 /* NSMutableString+YRDNetworkingMethods.h */,
+				E598AC771CEF011700294141 /* NSMutableString+YRDNetworkingMethods.m */,
+				E598AC791CEF07C800294141 /* NSURLRequest+YRDNetworkingMethods.h */,
+				E598AC7A1CEF07C800294141 /* NSURLRequest+YRDNetworkingMethods.m */,
+				E598AC7C1CEF084400294141 /* UIDevice+IdentifierAddition.h */,
+				E598AC7D1CEF084400294141 /* UIDevice+IdentifierAddition.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		E598AC891CF2A5B600294141 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E5500F3B1CF4236400A2169D /* YBGService */,
+				E5500F3E1CF4236400A2169D /* WeatherService */,
+				E598AC8A1CF2A5D900294141 /* YRDService.h */,
+				E598AC8B1CF2A5D900294141 /* YRDService.m */,
+				E598AC8D1CF2A7DB00294141 /* YRDServiceFactory.h */,
+				E598AC8E1CF2A7DB00294141 /* YRDServiceFactory.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E598AC931CF2ADBE00294141 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E598ACA11CF2DBB000294141 /* LogComponents */,
+				E598AC9A1CF2B11D00294141 /* CacheComponents */,
+				E598ACB51CF3039800294141 /* YRDURLResponse.m */,
+				E598ACB61CF3039800294141 /* YRDURLResponse.h */,
+				E598ACB71CF3039800294141 /* YRDAppContext.m */,
+				E598ACB81CF3039800294141 /* YRDAppContext.h */,
+				E598ACBB1CF303EC00294141 /* YRDApiProxy.h */,
+				E598ACBC1CF303EC00294141 /* YRDApiProxy.m */,
+				E598ACBE1CF30C3500294141 /* YRDAPIBaseManager.h */,
+				E598ACBF1CF30C3500294141 /* YRDAPIBaseManager.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E598AC9A1CF2B11D00294141 /* CacheComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E598AC9B1CF2B17F00294141 /* YRDCachedObject.h */,
+				E598AC9C1CF2B17F00294141 /* YRDCachedObject.m */,
+				E598AC9E1CF2B36700294141 /* YRDCache.h */,
+				E598AC9F1CF2B36700294141 /* YRDCache.m */,
+			);
+			path = CacheComponents;
+			sourceTree = "<group>";
+		};
+		E598ACA11CF2DBB000294141 /* LogComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E598ACA21CF2DBCF00294141 /* YRDLoggerConfiguration.h */,
+				E598ACA31CF2DBCF00294141 /* YRDLoggerConfiguration.m */,
+				E598ACA51CF2E48400294141 /* YRDLogger.h */,
+				E598ACA61CF2E48400294141 /* YRDLogger.m */,
+			);
+			path = LogComponents;
+			sourceTree = "<group>";
+		};
+		E598ACC11CF404F500294141 /* HTTPDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E598ACC21CF404F500294141 /* API */,
+				E598ACC41CF404F500294141 /* VC */,
+			);
+			path = HTTPDemo;
+			sourceTree = "<group>";
+		};
+		E598ACC21CF404F500294141 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E598ACC81CF405E100294141 /* WeatherApiManager.h */,
+				E598ACC91CF405E100294141 /* WeatherApiManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E598ACC41CF404F500294141 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				E598ACCB1CF4069B00294141 /* WeatherViewController.h */,
+				E598ACCC1CF4069B00294141 /* WeatherViewController.m */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,13 +548,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5340B3D1C96A72900205879 /* SecondViewController.m in Sources */,
+				E598AC681CEEF2C400294141 /* YRDUDIDGenerator.m in Sources */,
+				E598ACA01CF2B36700294141 /* YRDCache.m in Sources */,
+				E598AC811CF2A4C800294141 /* YRDSignatureGenerator.m in Sources */,
+				E598AC721CEEFBF200294141 /* NSArray+YRDNetworkingMethods.m in Sources */,
+				E598AC8F1CF2A7DB00294141 /* YRDServiceFactory.m in Sources */,
+				E598ACC01CF30C3500294141 /* YRDAPIBaseManager.m in Sources */,
+				E5340B4E1C970F4B00205879 /* Request.m in Sources */,
 				E5340B441C96AB2200205879 /* YYModelTestViewController.m in Sources */,
 				E5340B471C96B0B400205879 /* Dog.m in Sources */,
 				E5340B341C969E9900205879 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				E598ACCD1CF4069B00294141 /* WeatherViewController.m in Sources */,
+				E5340B4B1C970F1500205879 /* AFAppDotNetAPIClient.m in Sources */,
+				E598ACCA1CF405E100294141 /* WeatherApiManager.m in Sources */,
+				E598ACA41CF2DBCF00294141 /* YRDLoggerConfiguration.m in Sources */,
+				E598AC781CEF011700294141 /* NSMutableString+YRDNetworkingMethods.m in Sources */,
+				E598AC751CEEFF3000294141 /* NSString+YRDNetworkingMethods.m in Sources */,
+				E598ACBA1CF3039800294141 /* YRDAppContext.m in Sources */,
 				E5340B411C96AA0500205879 /* User.m in Sources */,
+				E598ACB91CF3039800294141 /* YRDURLResponse.m in Sources */,
+				E598AC8C1CF2A5D900294141 /* YRDService.m in Sources */,
+				E598ACBD1CF303EC00294141 /* YRDApiProxy.m in Sources */,
+				E5500F411CF4236400A2169D /* YRDServiceYiBaoGao.m in Sources */,
+				E598AC7B1CEF07C800294141 /* NSURLRequest+YRDNetworkingMethods.m in Sources */,
+				E598AC9D1CF2B17F00294141 /* YRDCachedObject.m in Sources */,
+				E598AC6F1CEEFB0E00294141 /* NSObject+YRDNetworkingMethods.m in Sources */,
+				E598ACAA1CF2E7B200294141 /* YRDCommonParamsGenerator.m in Sources */,
 				E5340B131C9661AD00205879 /* AppDelegate.m in Sources */,
 				E5340B101C9661AD00205879 /* main.m in Sources */,
+				E598ACA71CF2E48400294141 /* YRDLogger.m in Sources */,
+				E598ACAD1CF2E91A00294141 /* YRDRequestGenerator.m in Sources */,
+				E5340B511C97103300205879 /* AFNDemoViewController.m in Sources */,
+				E5500F421CF4236400A2169D /* WeatherService.m in Sources */,
+				E598AC6C1CEEFAF400294141 /* NSDictionary+YRDNetworkingMethods.m in Sources */,
 				E5340B3E1C96A72900205879 /* ViewController.m in Sources */,
+				E598AC7E1CEF084400294141 /* UIDevice+IdentifierAddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
