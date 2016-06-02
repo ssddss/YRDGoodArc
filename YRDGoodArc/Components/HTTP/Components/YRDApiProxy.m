@@ -88,14 +88,15 @@ static NSString * const kYRDApiProxyDispatchItemKeyCallbackFail = @"kYRDApiProxy
     NSNumber *requestId = [self generateRequestId];
     
     // 跑到这里的block的时候，就已经是主线程了。
+    __weak typeof(&*self) weakSelf = self;
     NSURLSessionDataTask *task = [self.sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        
-        NSURLSessionDataTask *storedTask = self.dispatchTable[requestId];
+        __strong typeof(&*weakSelf) strongSelf = weakSelf;
+        NSURLSessionDataTask *storedTask = strongSelf.dispatchTable[requestId];
         if (storedTask == nil) {
             // 如果这个operation是被cancel的，那就不用处理回调了。
             return;
         }else{
-            [self.dispatchTable removeObjectForKey:requestId];
+            [strongSelf.dispatchTable removeObjectForKey:requestId];
         }
         NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         

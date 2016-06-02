@@ -12,28 +12,44 @@
 - (BOOL)isOnline {
     return YES;
 }
-- (NSString *)onlinePublicKey {
-    return nil;
-}
-- (NSString *)offlinePublicKey {
-    return nil;
-}
+
 - (NSString *)onlineApiBaseUrl {
-    return @"http://v.juhe.cn";
+    return @"http://portal.ly-sky.com:326";
 }
-- (NSString *)offlineApiBaseUrl {
-    return nil;
+
+
+- (NSString *)onlineApiVersion
+{
+    return @"";
 }
-- (NSString *)onlineApiVersion {
-    return nil;
+
+- (NSString *)onlinePrivateKey
+{
+    return @"";
 }
-- (NSString *)offlineApiVersion {
-    return nil;
+
+- (NSString *)onlinePublicKey
+{
+    return @"";
 }
-- (NSString *)onlinePrivateKey {
-    return nil;
+
+- (NSString *)offlineApiBaseUrl
+{
+    return self.onlineApiBaseUrl;
 }
-- (NSString *)offlinePrivateKey {
-    return nil;
+
+- (NSString *)offlineApiVersion
+{
+    return self.onlineApiVersion;
+}
+
+- (NSString *)offlinePrivateKey
+{
+    return self.onlinePrivateKey;
+}
+
+- (NSString *)offlinePublicKey
+{
+    return self.onlinePublicKey;
 }
 @end

@@ -24,6 +24,10 @@
 		E5340B511C97103300205879 /* AFNDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5340B501C97103300205879 /* AFNDemoViewController.m */; };
 		E5500F411CF4236400A2169D /* YRDServiceYiBaoGao.m in Sources */ = {isa = PBXBuildFile; fileRef = E5500F3D1CF4236400A2169D /* YRDServiceYiBaoGao.m */; };
 		E5500F421CF4236400A2169D /* WeatherService.m in Sources */ = {isa = PBXBuildFile; fileRef = E5500F401CF4236400A2169D /* WeatherService.m */; };
+		E559C52C1D001B7B00E118E4 /* HTTPPostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E559C52B1D001B7B00E118E4 /* HTTPPostTableViewController.m */; };
+		E559C52F1D001C6E00E118E4 /* YiBaoGaoApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E559C52E1D001C6E00E118E4 /* YiBaoGaoApiManager.m */; };
+		E559C5331D00217600E118E4 /* SchoolListReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E559C5321D00217600E118E4 /* SchoolListReformer.m */; };
+		E559C5371D0022AD00E118E4 /* SchoolItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E559C5361D0022AD00E118E4 /* SchoolItem.m */; };
 		E598AC681CEEF2C400294141 /* YRDUDIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC671CEEF2C400294141 /* YRDUDIDGenerator.m */; };
 		E598AC6C1CEEFAF400294141 /* NSDictionary+YRDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC6B1CEEFAF400294141 /* NSDictionary+YRDNetworkingMethods.m */; };
 		E598AC6F1CEEFB0E00294141 /* NSObject+YRDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AC6E1CEEFB0E00294141 /* NSObject+YRDNetworkingMethods.m */; };
@@ -84,6 +88,14 @@
 		E5500F3D1CF4236400A2169D /* YRDServiceYiBaoGao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDServiceYiBaoGao.m; sourceTree = "<group>"; };
 		E5500F3F1CF4236400A2169D /* WeatherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherService.h; sourceTree = "<group>"; };
 		E5500F401CF4236400A2169D /* WeatherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherService.m; sourceTree = "<group>"; };
+		E559C52A1D001B7B00E118E4 /* HTTPPostTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPPostTableViewController.h; sourceTree = "<group>"; };
+		E559C52B1D001B7B00E118E4 /* HTTPPostTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPPostTableViewController.m; sourceTree = "<group>"; };
+		E559C52D1D001C6E00E118E4 /* YiBaoGaoApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiBaoGaoApiManager.h; sourceTree = "<group>"; };
+		E559C52E1D001C6E00E118E4 /* YiBaoGaoApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiBaoGaoApiManager.m; sourceTree = "<group>"; };
+		E559C5311D00217600E118E4 /* SchoolListReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolListReformer.h; sourceTree = "<group>"; };
+		E559C5321D00217600E118E4 /* SchoolListReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolListReformer.m; sourceTree = "<group>"; };
+		E559C5351D0022AD00E118E4 /* SchoolItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolItem.h; sourceTree = "<group>"; };
+		E559C5361D0022AD00E118E4 /* SchoolItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolItem.m; sourceTree = "<group>"; };
 		E598AC641CEEBE9400294141 /* YRDNetworkingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDNetworkingConfiguration.h; sourceTree = "<group>"; };
 		E598AC661CEEF2C400294141 /* YRDUDIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDUDIDGenerator.h; sourceTree = "<group>"; };
 		E598AC671CEEF2C400294141 /* YRDUDIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDUDIDGenerator.m; sourceTree = "<group>"; };
@@ -290,6 +302,24 @@
 			path = WeatherService;
 			sourceTree = "<group>";
 		};
+		E559C5301D00215900E118E4 /* DataReformer */ = {
+			isa = PBXGroup;
+			children = (
+				E559C5311D00217600E118E4 /* SchoolListReformer.h */,
+				E559C5321D00217600E118E4 /* SchoolListReformer.m */,
+			);
+			path = DataReformer;
+			sourceTree = "<group>";
+		};
+		E559C5341D0021DB00E118E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E559C5351D0022AD00E118E4 /* SchoolItem.h */,
+				E559C5361D0022AD00E118E4 /* SchoolItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E598AC621CEDB23300294141 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +432,8 @@
 		E598ACC11CF404F500294141 /* HTTPDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E559C5341D0021DB00E118E4 /* Model */,
+				E559C5301D00215900E118E4 /* DataReformer */,
 				E598ACC21CF404F500294141 /* API */,
 				E598ACC41CF404F500294141 /* VC */,
 			);
@@ -413,6 +445,8 @@
 			children = (
 				E598ACC81CF405E100294141 /* WeatherApiManager.h */,
 				E598ACC91CF405E100294141 /* WeatherApiManager.m */,
+				E559C52D1D001C6E00E118E4 /* YiBaoGaoApiManager.h */,
+				E559C52E1D001C6E00E118E4 /* YiBaoGaoApiManager.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -422,6 +456,8 @@
 			children = (
 				E598ACCB1CF4069B00294141 /* WeatherViewController.h */,
 				E598ACCC1CF4069B00294141 /* WeatherViewController.m */,
+				E559C52A1D001B7B00E118E4 /* HTTPPostTableViewController.h */,
+				E559C52B1D001B7B00E118E4 /* HTTPPostTableViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -460,6 +496,7 @@
 				TargetAttributes = {
 					E5340B0A1C9661AD00205879 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = FU8K87M93N;
 					};
 				};
 			};
@@ -561,8 +598,10 @@
 				E598ACCD1CF4069B00294141 /* WeatherViewController.m in Sources */,
 				E5340B4B1C970F1500205879 /* AFAppDotNetAPIClient.m in Sources */,
 				E598ACCA1CF405E100294141 /* WeatherApiManager.m in Sources */,
+				E559C5371D0022AD00E118E4 /* SchoolItem.m in Sources */,
 				E598ACA41CF2DBCF00294141 /* YRDLoggerConfiguration.m in Sources */,
 				E598AC781CEF011700294141 /* NSMutableString+YRDNetworkingMethods.m in Sources */,
+				E559C5331D00217600E118E4 /* SchoolListReformer.m in Sources */,
 				E598AC751CEEFF3000294141 /* NSString+YRDNetworkingMethods.m in Sources */,
 				E598ACBA1CF3039800294141 /* YRDAppContext.m in Sources */,
 				E5340B411C96AA0500205879 /* User.m in Sources */,
@@ -573,6 +612,8 @@
 				E598AC7B1CEF07C800294141 /* NSURLRequest+YRDNetworkingMethods.m in Sources */,
 				E598AC9D1CF2B17F00294141 /* YRDCachedObject.m in Sources */,
 				E598AC6F1CEEFB0E00294141 /* NSObject+YRDNetworkingMethods.m in Sources */,
+				E559C52C1D001B7B00E118E4 /* HTTPPostTableViewController.m in Sources */,
+				E559C52F1D001C6E00E118E4 /* YiBaoGaoApiManager.m in Sources */,
 				E598ACAA1CF2E7B200294141 /* YRDCommonParamsGenerator.m in Sources */,
 				E5340B131C9661AD00205879 /* AppDelegate.m in Sources */,
 				E5340B101C9661AD00205879 /* main.m in Sources */,
@@ -695,12 +736,15 @@
 			baseConfigurationReference = BCE42E0FB5C29340E89F25B7 /* Pods-YRDGoodArc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YRDGoodArc/YRDGoodArcPrefixHeader.pch;
 				INFOPLIST_FILE = YRDGoodArc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ssdd.YRDGoodArc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/Pods/**";
 			};
 			name = Debug;
@@ -710,12 +754,15 @@
 			baseConfigurationReference = D00A1A3572EB534E01342B99 /* Pods-YRDGoodArc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YRDGoodArc/YRDGoodArcPrefixHeader.pch;
 				INFOPLIST_FILE = YRDGoodArc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ssdd.YRDGoodArc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/Pods/**";
 			};
 			name = Release;

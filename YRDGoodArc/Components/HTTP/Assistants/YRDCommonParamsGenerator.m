@@ -12,6 +12,7 @@
 @implementation YRDCommonParamsGenerator
 + (NSDictionary *)commonParamsDictionary {
     YRDAppContext *context = [YRDAppContext sharedInstance];
+    NSLog(@"device ip:%@",context.ip);
     return nil;
     //TODO
 //    return @{

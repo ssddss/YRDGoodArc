@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="1928" y="1034"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Post Table View Controller-->
         <scene sceneID="fCl-Gz-mL1">
             <objects>
-                <tableViewController id="b0p-XT-hYF" sceneMemberID="viewController">
+                <tableViewController id="b0p-XT-hYF" customClass="HTTPPostTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="k3u-TX-QKf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -13,11 +13,13 @@
 #import "YRDServiceFactory.h"
 
 #define YRDCallAPI(REQUEST_METHOD, REQUEST_ID)                                                       \
-{                                                                                       \
+{          __weak typeof(&*self) weakSelf = self;                                                                  \
 REQUEST_ID = [[YRDApiProxy sharedInstance] call##REQUEST_METHOD##WithParams:apiParams serviceIdentifier:self.child.serviceType methodName:self.child.methodName success:^(YRDURLResponse *response) { \
-[self successedOnCallingAPI:response];                                          \
+ __strong typeof(&*weakSelf) strongSelf = weakSelf;                 \
+[strongSelf successedOnCallingAPI:response];                                          \
 } fail:^(YRDURLResponse *response) {                                                \
-[self failedOnCallingAPI:response withErrorType:YRDAPIManagerErrorTypeDefault];  \
+ __strong typeof(&*weakSelf) strongSelf = weakSelf;                             \
+[strongSelf failedOnCallingAPI:response withErrorType:YRDAPIManagerErrorTypeDefault];  \
 }];                                                                                 \
 [self.requestIdList addObject:@(REQUEST_ID)];                                          \
 }
@@ -49,6 +51,8 @@ REQUEST_ID = [[YRDApiProxy sharedInstance] call##REQUEST_METHOD##WithParams:apiP
         if ([self conformsToProtocol:@protocol(YRDAPIManager)]) {
             self.child = (id <YRDAPIManager>)self;
         }
+       
+       
     }
     return self;
 }

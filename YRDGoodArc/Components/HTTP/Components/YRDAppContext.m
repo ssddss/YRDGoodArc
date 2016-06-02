@@ -252,21 +252,71 @@
         if (success == 0) {
             // Loop through linked list of interfaces
             temp_addr = interfaces;
-            while(temp_addr != NULL) {
-                if(temp_addr->ifa_addr->sa_family == AF_INET) {
-                    // Check if interface is en0 which is the wifi connection on the iPhone
-                    if([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
+            //适配IPv6-Only
+            while (temp_addr != NULL) {
+                NSLog(@"ifa_name===%@",[NSString stringWithUTF8String:temp_addr->ifa_name]);
+                // Check if interface is en0 which is the wifi connection on the iPhone
+                if ([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"] || [[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"pdp_ip0"])
+                {
+                    //如果是IPV4地址，直接转化
+                    if (temp_addr->ifa_addr->sa_family == AF_INET){
                         // Get NSString from C String
-                        _ip = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+                        _ip = [self formatIPV4Address:((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr];
+                    }
+                    
+                    //如果是IPV6地址
+                    else if (temp_addr->ifa_addr->sa_family == AF_INET6){
+                        _ip = [self formatIPV6Address:((struct sockaddr_in6 *)temp_addr->ifa_addr)->sin6_addr];
+                        if (_ip && ![_ip isEqualToString:@""] && ![_ip.uppercaseString hasPrefix:@"FE80"]) break;
                     }
                 }
+                
                 temp_addr = temp_addr->ifa_next;
             }
+        
+//            while(temp_addr != NULL) {
+//                if(temp_addr->ifa_addr->sa_family == AF_INET) {
+//                    // Check if interface is en0 which is the wifi connection on the iPhone
+//                    if([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
+//                        // Get NSString from C String
+//                        _ip = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+//                    }
+//                }
+//                temp_addr = temp_addr->ifa_next;
+//            }
         }
         // Free memory
         freeifaddrs(interfaces);
     }
     return _ip;
+}
+
+//for IPV6
+- (NSString *)formatIPV6Address:(struct in6_addr)ipv6Addr{
+    NSString *address = nil;
+    
+    char dstStr[INET6_ADDRSTRLEN];
+    char srcStr[INET6_ADDRSTRLEN];
+    memcpy(srcStr, &ipv6Addr, sizeof(struct in6_addr));
+    if(inet_ntop(AF_INET6, srcStr, dstStr, INET6_ADDRSTRLEN) != NULL){
+        address = [NSString stringWithUTF8String:dstStr];
+    }
+    
+    return address;
+}
+
+//for IPV4
+- (NSString *)formatIPV4Address:(struct in_addr)ipv4Addr{
+    NSString *address = nil;
+    
+    char dstStr[INET_ADDRSTRLEN];
+    char srcStr[INET_ADDRSTRLEN];
+    memcpy(srcStr, &ipv4Addr, sizeof(struct in_addr));
+    if(inet_ntop(AF_INET, srcStr, dstStr, INET_ADDRSTRLEN) != NULL){
+        address = [NSString stringWithUTF8String:dstStr];
+    }
+    
+    return address;
 }
 - (NSString *)mac
 {

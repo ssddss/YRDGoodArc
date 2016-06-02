@@ -6,9 +6,9 @@
 //  Copyright © 2016年 yurongde. All rights reserved.
 //
 
-#import "WeatherApiManager.h"
+#import "YiBaoGaoApiManager.h"
 
-@implementation WeatherApiManager
+@implementation YiBaoGaoApiManager
 
 #pragma mark - life cycle
 - (instancetype)init {
@@ -17,23 +17,17 @@
         return nil;
     }
     
-    self.delegate = self;
+    
     self.paramSource = self;
     self.validator = self;
     
     return self;
 }
 
-#pragma mark - YRDAPIManagerApiCallBackDelegate
-- (void)managerCallAPIDidSuccess:(YRDAPIBaseManager *)manager {
-    //数据成功返回
-}
-- (void)managerCallAPIDidFailed:(YRDAPIBaseManager *)manager {
-    //数据返回不正确
-}
+
 #pragma mark - Params
 - (NSDictionary *)paramsForApi:(YRDAPIBaseManager *)manager {
-    return @{@"cityname":@"广州",@"key":@"17c0a4b22ba32da3a9f68cb9b8a5159f"};
+    return nil;
 }
 #pragma mark - interceptor
 - (void)afterCallingAPIWithParams:(NSDictionary *)params {
@@ -55,12 +49,12 @@
 }
 #pragma mark - APIManager
 - (NSString *)methodName {
-    return @"weather/index";
+    return @"mobileapi/service/common/schools";
 }
 - (NSString *)serviceType {
-    return kYRDServiceWeather;
+    return kYRDServiceYibaogao;
 }
 - (YRDAPIManagerRequestType)requestType {
-    return YRDAPIManagerRequestTypeGet;
+    return YRDAPIManagerRequestTypePost;
 }
 @end
