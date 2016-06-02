@@ -34,7 +34,7 @@ static NSString *const kCellID = @"cell";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self.apiManager loadData];
-    [self.apiManager1 loadData];
+    [self.apiManager loadData];
 
 }
 
