@@ -33,8 +33,9 @@ static NSString *const kCellID = @"cell";
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [self.apiManager loadData];
-    [self.apiManager loadData];
+   NSInteger requestID = [self.apiManager loadData];
+//    [self.apiManager cancelAllRequests];
+//    [self.apiManager loadData];
 
 }
 

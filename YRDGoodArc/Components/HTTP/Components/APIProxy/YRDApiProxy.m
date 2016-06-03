@@ -84,57 +84,58 @@ static NSString * const kYRDApiProxyDispatchItemKeyCallbackFail = @"kYRDApiProxy
 /** 这个函数存在的意义在于，如果将来要把AFNetworking换掉，只要修改这个函数的实现即可。 */
 - (NSNumber *)callApiWithRequest:(NSURLRequest *)request success:(YRDCallback)success fail:(YRDCallback)fail
 {
-    // 之所以不用getter，是因为如果放到getter里面的话，每次调用self.recordedRequestId的时候值就都变了，违背了getter的初衷
-    NSNumber *requestId = [self generateRequestId];
+    NSLog(@"\n==================================\n\nRequest Start: \n\n %@\n\n==================================", request.URL);
     
     // 跑到这里的block的时候，就已经是主线程了。
-    __weak typeof(&*self) weakSelf = self;
-    NSURLSessionDataTask *task = [self.sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        __strong typeof(&*weakSelf) strongSelf = weakSelf;
-        NSURLSessionDataTask *storedTask = strongSelf.dispatchTable[requestId];
+    __block NSURLSessionDataTask *dataTask = nil;
+    dataTask = [self.sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        NSNumber *requestID = @([dataTask taskIdentifier]);
+
+        NSURLSessionDataTask *storedTask = self.dispatchTable[requestID];
         if (storedTask == nil) {
             // 如果这个operation是被cancel的，那就不用处理回调了。
+            NSLog(@"取消请求");
             return;
         }else{
-            [strongSelf.dispatchTable removeObjectForKey:requestId];
+            [self.dispatchTable removeObjectForKey:requestID];
         }
-        NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+        NSData *responseData = responseObject;
+        NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
         
-        if (!error) {
-            
-            // success
-            
-            [YRDLogger logDebugInfoWithResponse:(NSHTTPURLResponse*)response
-                                  resposeString:responseString
-                                        request:request
-                                          error:NULL];
-            
-            YRDURLResponse *response = [[YRDURLResponse alloc] initWithResponseString:responseString
-                                                                            requestId:requestId
-                                                                              request:request
-                                                                         responseData:responseObject
-                                                                               status:YRDURLResponseStatusSuccess];
-            success?success(response):nil;
-        }else{
-            [YRDLogger logDebugInfoWithResponse:(NSHTTPURLResponse*)response
-                                  resposeString:responseString
-                                        request:request
-                                          error:error];
-            
-            YRDURLResponse *response = [[YRDURLResponse alloc] initWithResponseString:responseString
-                                                                            requestId:requestId
-                                                                              request:request
-                                                                         responseData:responseObject
-                                                                                error:error];
-            fail?fail(response):nil;
+        if (error) {
+            [YRDLogger logDebugInfoWithResponse:httpResponse
+                                 resposeString:responseString
+                                       request:request
+                                         error:error];
+            YRDURLResponse *YRDResponse = [[YRDURLResponse alloc] initWithResponseString:responseString requestId:requestID request:request responseData:responseData error:error];
+            fail?fail(YRDResponse):nil;
+        } else {
+            // 检查http response是否成立。
+            [YRDLogger logDebugInfoWithResponse:httpResponse
+                                 resposeString:responseString
+                                       request:request
+                                         error:NULL];
+            YRDURLResponse *CTResponse = [[YRDURLResponse alloc] initWithResponseString:responseString requestId:requestID request:request responseData:responseData status:YRDURLResponseStatusSuccess];
+            success?success(CTResponse):nil;
         }
     }];
     
-    self.dispatchTable[requestId] = task;
-    [task resume];
+    NSNumber *requestId = @([dataTask taskIdentifier]);
+    
+    self.dispatchTable[requestId] = dataTask;
+    [dataTask resume];
+    
     return requestId;
+
 }
 
+/**
+ *  原来用来生成请求id的，现在用dataTask的taskId
+ *
+ *  @return <#return value description#>
+ */
 - (NSNumber *)generateRequestId
 {
     if (_recordedRequestId == nil) {

@@ -48,10 +48,14 @@ REQUEST_ID = [[YRDApiProxy sharedInstance] call##REQUEST_METHOD##WithParams:apiP
         _errorMessage = nil;
         _errorType = YRDAPIManagerErrorTypeDefault;
         
+        //一定要实现这个代理，提供参数
         if ([self conformsToProtocol:@protocol(YRDAPIManager)]) {
             self.child = (id <YRDAPIManager>)self;
         }
-       
+        else {
+            NSException *exception = [[NSException alloc] init];
+            @throw exception;
+        }
        
     }
     return self;
@@ -97,10 +101,12 @@ REQUEST_ID = [[YRDApiProxy sharedInstance] call##REQUEST_METHOD##WithParams:apiP
     NSDictionary *apiParams = [self reformParams:params];
     if ([self shouldCallAPIWithParams:apiParams]) {
         if ([self.validator manager:self isCorrectWithParamsData:apiParams]) {
+            
+             // 先检查一下是否有缓存
             if ([self shouldCache] && [self hasCacheWithParams:apiParams]) {
                 return 0;
             }
-            
+            // 实际的网络请求
             if ([self isReachable]) {
                 switch (self.child.requestType) {
                     case YRDAPIManagerRequestTypeGet: {
@@ -121,7 +127,9 @@ REQUEST_ID = [[YRDApiProxy sharedInstance] call##REQUEST_METHOD##WithParams:apiP
                     }
                 }
                 
-                NSMutableDictionary *params = [apiParams mutableCopy];
+                //发出请求之后 的请求参数
+                NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:0];
+                [params addEntriesFromDictionary:apiParams];
                 params[kYRDAPIBaseManagerRequestID] = @(requestId);
                 [self afterCallingAPIWithParams:params];
                 return requestId;
