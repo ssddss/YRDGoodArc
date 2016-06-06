@@ -14,6 +14,7 @@ pod 'MBProgressHUD', '~> 0.9.2'
 pod 'AsyncDisplayKit'
 pod 'MJRefresh'
 pod 'MWPhotoBrowser'
+pod 'JPFPSStatus', '~> 0.0.2'
 end
 
 

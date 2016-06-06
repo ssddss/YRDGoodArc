@@ -35,7 +35,7 @@ static NSString *const kCellID = @"cell";
     
    NSInteger requestID = [self.apiManager loadData];
 //    [self.apiManager cancelAllRequests];
-//    [self.apiManager loadData];
+ 
 
 }
 
@@ -52,6 +52,12 @@ static NSString *const kCellID = @"cell";
     //数据成功返回
     NSArray *arr = [manager fetchDataWithReformer:self.reformer];
     [self.dataSource addObjectsFromArray:arr];
+    [self.dataSource addObjectsFromArray:arr];
+    [self.dataSource addObjectsFromArray:arr];
+    [self.dataSource addObjectsFromArray:arr];
+    [self.dataSource addObjectsFromArray:arr];
+    [self.dataSource addObjectsFromArray:arr];
+
     [self.tableView reloadData];
     
 }
