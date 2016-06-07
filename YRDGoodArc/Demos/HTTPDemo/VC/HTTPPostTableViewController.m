@@ -33,9 +33,20 @@ static NSString *const kCellID = @"cell";
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-   NSInteger requestID = [self.apiManager loadData];
-//    [self.apiManager cancelAllRequests];
- 
+//   NSInteger requestID = [self.apiManager loadData];
+    @weakify(self)
+    [self.apiManager1 startWithCompletionBlockWithSuccess:^(YRDAPIBaseManager *manager) {
+        @strongify(self)
+        NSLog(@"blockChange1");
+        NSArray *arr = [manager fetchDataWithReformer:self.reformer];
+        [self.dataSource addObjectsFromArray:arr];
+
+        [self.tableView reloadData];
+
+    } failure:^(YRDAPIBaseManager *manager) {
+        
+    }];
+
 
 }
 
@@ -52,11 +63,11 @@ static NSString *const kCellID = @"cell";
     //数据成功返回
     NSArray *arr = [manager fetchDataWithReformer:self.reformer];
     [self.dataSource addObjectsFromArray:arr];
-    [self.dataSource addObjectsFromArray:arr];
-    [self.dataSource addObjectsFromArray:arr];
-    [self.dataSource addObjectsFromArray:arr];
-    [self.dataSource addObjectsFromArray:arr];
-    [self.dataSource addObjectsFromArray:arr];
+//    [self.dataSource addObjectsFromArray:arr];
+//    [self.dataSource addObjectsFromArray:arr];
+//    [self.dataSource addObjectsFromArray:arr];
+//    [self.dataSource addObjectsFromArray:arr];
+//    [self.dataSource addObjectsFromArray:arr];
 
     [self.tableView reloadData];
     
@@ -149,7 +160,7 @@ static NSString *const kCellID = @"cell";
 - (YiBaoGaoApiManager *)apiManager1 {
     if (!_apiManager1) {
         _apiManager1 = [[YiBaoGaoApiManager alloc]init];
-        _apiManager1.delegate = self;
+//        _apiManager1.delegate = self;
     }
     return _apiManager1;
 }

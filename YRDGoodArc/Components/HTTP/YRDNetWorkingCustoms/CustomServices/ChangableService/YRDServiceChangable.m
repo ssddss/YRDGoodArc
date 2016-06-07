@@ -14,7 +14,7 @@
 }
 
 - (NSString *)onlineApiBaseUrl {
-    return USER_DEFAULTS_GET(kYRDServiceChangable);
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kYRDServiceChangable];
 }
 
 

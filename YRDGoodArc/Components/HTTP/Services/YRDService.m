@@ -18,7 +18,10 @@
     if ([self conformsToProtocol:@protocol(YRDServiceProtocal)]) {
         self.child = (id<YRDServiceProtocal>)self;
     }
-    
+    else {
+        NSException *exception = [[NSException alloc] init];
+        @throw exception;
+    }
     return self;
 }
 

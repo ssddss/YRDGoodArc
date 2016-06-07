@@ -94,7 +94,8 @@ static NSString * const kYRDApiProxyDispatchItemKeyCallbackFail = @"kYRDApiProxy
         NSURLSessionDataTask *storedTask = self.dispatchTable[requestID];
         if (storedTask == nil) {
             // 如果这个operation是被cancel的，那就不用处理回调了。
-            NSLog(@"取消请求");
+            NSLog(@"\n==================================\n\nRequest Cancel: \n\n %@\n\n==================================", request.URL);
+            
             return;
         }else{
             [self.dispatchTable removeObjectForKey:requestID];

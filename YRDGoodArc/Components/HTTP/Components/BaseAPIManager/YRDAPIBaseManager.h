@@ -20,7 +20,7 @@ static NSString * const kYRDAPIBaseManagerRequestID = @"kYRDAPIBaseManagerReques
 
 //api回调
 @protocol YRDAPIManagerApiCallBackDelegate <NSObject>
-@required
+@optional
 /**
  *  成功时
  *
@@ -181,6 +181,7 @@ typedef NS_ENUM (NSUInteger, YRDAPIManagerRequestType){
 /*************************************************************************************************/
 /*                                       YRDAPIBaseManager                                        */
 /*************************************************************************************************/
+typedef void(^YRDRequestCompletionBlock)(YRDAPIBaseManager *manager);
 
 @interface YRDAPIBaseManager : NSObject
 
@@ -198,6 +199,11 @@ typedef NS_ENUM (NSUInteger, YRDAPIManagerRequestType){
 @property (nonatomic, copy, readonly) NSString *errorMessage;
 @property (nonatomic, readonly) YRDAPIManagerErrorType errorType;/**< 状态*/
 
+
+@property (nonatomic, copy) YRDRequestCompletionBlock successCompletionBlock;/**< 成功后的block回调*/
+
+@property (nonatomic, copy) YRDRequestCompletionBlock failureCompletionBlock;/**< 失败后的block回调*/
+
 @property (nonatomic, assign, readonly) BOOL isReachable;/**< 网络连接状态*/
 
 @property (nonatomic, assign, readonly) BOOL isLoading;/**< 正在请求，判断方式是请求列表里有没有这个requestId*/
@@ -211,12 +217,38 @@ typedef NS_ENUM (NSUInteger, YRDAPIManagerRequestType){
  */
 - (id)fetchDataWithReformer:(id<YRDAPIManagerCallbackDataReformer>)reformer;
 //尽量使用loadData这个方法,这个方法会通过param source来获得参数，这使得参数的生成逻辑位于controller中的固定位置
+//使用代理处理请求
 - (NSInteger)loadData;
 
+
+/// block启动请求
+/*
+ 记得使用weakSelf,不然如果网络超时的时候会延长生命周期。
+@weakify(self)
+[self doSomething^{
+    @strongify(self)
+    if (!self) return;
+    ...
+}];
+*/
+- (void)startWithCompletionBlockWithSuccess:(YRDRequestCompletionBlock)success
+                                    failure:(YRDRequestCompletionBlock)failure;
+//设置block
+- (void)setCompletionBlockWithSuccess:(YRDRequestCompletionBlock)success
+                              failure:(YRDRequestCompletionBlock)failure;
+
+/// 把block置nil来打破循环引用
+- (void)clearCompletionBlock;
+
 /**
- 取消当前apimanager的请求所有请求
+ 取消当前apimanager请求所有请求
  */
 - (void)cancelAllRequests;
+/**
+ *  取消某个请求
+ *
+ *  @param requestID 
+ */
 - (void)cancelRequestWithRequestId:(NSInteger)requestID;
 
 // 拦截器方法，继承之后需要调用一下super

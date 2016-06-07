@@ -71,12 +71,15 @@ REQUEST_ID = [[YRDApiProxy sharedInstance] call##REQUEST_METHOD##WithParams:apiP
 - (void)cancelAllRequests {
     [[YRDApiProxy sharedInstance]cancelRequestWithRequestIDList:self.requestIdList];
     [self.requestIdList removeAllObjects];
+    [self clearCompletionBlock];
 }
 
 - (void)cancelRequestWithRequestId:(NSInteger)requestID {
   
+    
     [self removeRequestIdWithRequestID:requestID];
     [[YRDApiProxy sharedInstance] cancelRequestWithRequestID:@(requestID)];
+    [self clearCompletionBlock];
     
 }
 - (id)fetchDataWithReformer:(id<YRDAPIManagerCallbackDataReformer>)reformer {
@@ -90,6 +93,25 @@ REQUEST_ID = [[YRDApiProxy sharedInstance] call##REQUEST_METHOD##WithParams:apiP
     return resultData;
 }
 #pragma mark - calling API
+
+- (void)startWithCompletionBlockWithSuccess:(YRDRequestCompletionBlock)success failure:(YRDRequestCompletionBlock)failure {
+   
+    [self setCompletionBlockWithSuccess:success failure:failure];
+    [self loadData];
+}
+- (void)setCompletionBlockWithSuccess:(YRDRequestCompletionBlock)success
+                              failure:(YRDRequestCompletionBlock)failure {
+    [self clearCompletionBlock];
+    self.successCompletionBlock = success;
+    self.failureCompletionBlock = failure;
+}
+
+- (void)clearCompletionBlock {
+    // nil out to break the retain cycle.
+//    最好还是使用weakSelf
+    self.successCompletionBlock = nil;
+    self.failureCompletionBlock = nil;
+}
 - (NSInteger)loadData {
     NSDictionary *params = [self.paramSource paramsForApi:self];
     NSInteger requestId = [self loadDataWithParams:params];
@@ -171,19 +193,35 @@ REQUEST_ID = [[YRDApiProxy sharedInstance] call##REQUEST_METHOD##WithParams:apiP
         }
         
         [self beforePerformSuccessWithResponse:response];
-        [self.delegate managerCallAPIDidSuccess:self];
+        //代理回调
+        if ([self.delegate respondsToSelector:@selector(managerCallAPIDidSuccess:)]) {
+            [self.delegate managerCallAPIDidSuccess:self];
+        }
+        //block回调
+        !self.successCompletionBlock?:self.successCompletionBlock(self);
+        
         [self afterPerformSuccessWithResponse:response];
     } else {
         [self failedOnCallingAPI:response withErrorType:YRDAPIManagerErrorTypeNoContent];
     }
+    
+    [self clearCompletionBlock];
 }
 - (void)failedOnCallingAPI:(YRDURLResponse *)response withErrorType:(YRDAPIManagerErrorType)errorType
 {
     self.errorType = errorType;
     [self removeRequestIdWithRequestID:response.requestId];
     [self beforePerformFailWithResponse:response];
-    [self.delegate managerCallAPIDidFailed:self];
+    //代理回调
+    if ([self.delegate respondsToSelector:@selector(managerCallAPIDidFailed:)]) {
+        [self.delegate managerCallAPIDidFailed:self];
+    }
+    //block回调
+    !self.failureCompletionBlock?:self.failureCompletionBlock(self);
+    
     [self afterPerformFailWithResponse:response];
+    [self clearCompletionBlock];
+
 }
 #pragma mark - method for interceptor
 /*
