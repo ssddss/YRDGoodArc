@@ -12,6 +12,16 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import "UINavigationController+FDFullscreenPopGesture.h"
-#import "YYModel.h"
 
+//YY的组件
+#import <YYText/YYText.h>
+#import <YYAsyncLayer/YYAsyncLayer.h>
+#import <YYModel/YYModel.h>
+#import <YYCategories/YYCategories.h>
+
+//通用的类
+#import "YRDGeneral.h"
+
+//网络封装
+#import "YRDNetworking.h"
 #endif /* YRDGoodArcPrefixHeader_pch */

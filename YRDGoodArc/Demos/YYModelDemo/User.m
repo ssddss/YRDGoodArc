@@ -7,7 +7,6 @@
 //
 
 #import "User.h"
-#import "NSObject+YYModel.h"
 
 @interface User()<NSCoding,NSCopying>
 @end

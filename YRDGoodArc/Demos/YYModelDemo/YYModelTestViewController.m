@@ -8,7 +8,7 @@
 
 #import "YYModelTestViewController.h"
 #import "User.h"
-
+#import "NSObject+YYModel.h"
 @interface YYModelTestViewController ()
 
 @end

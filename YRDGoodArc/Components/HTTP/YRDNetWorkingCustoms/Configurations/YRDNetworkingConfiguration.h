@@ -36,5 +36,7 @@ extern NSString * const kYRDServiceYibaogao;
 //天气，测试用
 extern NSString *const kYRDServiceWeather;
 
+extern NSString *const kYRDServiceChangable;/**< 自定义保存的可变service,用于可以选择改变的服务器,使用userDefault保存这个值*/
+
 
 #endif /* YRDNetworkingConfiguration_h */

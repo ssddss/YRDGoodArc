@@ -10,8 +10,11 @@
 #import "YRDNetworkingConfiguration.h"
 #import "YRDServiceYiBaoGao.h"
 #import "WeatherService.h"
+#import "YRDServiceChangable.h"
+
 NSString * const kYRDServiceYibaogao = @"YiBaoGao";
 NSString *const kYRDServiceWeather = @"weather";
+NSString *const kYRDServiceChangable = @"ChangableServiceUrl";
 @interface YRDServiceFactory()
     
 @property (nonatomic, strong) NSCache *serviceStorage;
@@ -49,7 +52,9 @@ NSString *const kYRDServiceWeather = @"weather";
     else if ([identifier isEqualToString:kYRDServiceWeather]) {
         return [[WeatherService alloc]init];
     }
-    
+    else if ([identifier isEqualToString:kYRDServiceChangable]) {
+        return [[YRDServiceChangable alloc]init];
+    }
     return nil;
 }
 
