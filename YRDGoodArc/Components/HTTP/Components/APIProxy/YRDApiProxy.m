@@ -118,8 +118,8 @@ static NSString * const kYRDApiProxyDispatchItemKeyCallbackFail = @"kYRDApiProxy
                                  resposeString:responseString
                                        request:request
                                          error:NULL];
-            YRDURLResponse *CTResponse = [[YRDURLResponse alloc] initWithResponseString:responseString requestId:requestID request:request responseData:responseData status:YRDURLResponseStatusSuccess];
-            success?success(CTResponse):nil;
+            YRDURLResponse *YRDResponse = [[YRDURLResponse alloc] initWithResponseString:responseString requestId:requestID request:request responseData:responseData status:YRDURLResponseStatusSuccess];
+            success?success(YRDResponse):nil;
         }
     }];
     

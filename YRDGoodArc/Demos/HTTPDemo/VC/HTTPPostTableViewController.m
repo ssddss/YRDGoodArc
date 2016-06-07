@@ -33,7 +33,7 @@ static NSString *const kCellID = @"cell";
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-//   NSInteger requestID = [self.apiManager loadData];
+   NSInteger requestID = [self.apiManager loadData];
     @weakify(self)
     [self.apiManager1 startWithCompletionBlockWithSuccess:^(YRDAPIBaseManager *manager) {
         @strongify(self)
@@ -63,11 +63,6 @@ static NSString *const kCellID = @"cell";
     //数据成功返回
     NSArray *arr = [manager fetchDataWithReformer:self.reformer];
     [self.dataSource addObjectsFromArray:arr];
-//    [self.dataSource addObjectsFromArray:arr];
-//    [self.dataSource addObjectsFromArray:arr];
-//    [self.dataSource addObjectsFromArray:arr];
-//    [self.dataSource addObjectsFromArray:arr];
-//    [self.dataSource addObjectsFromArray:arr];
 
     [self.tableView reloadData];
     
