@@ -94,10 +94,10 @@
 		E559C5321D00217600E118E4 /* SchoolListReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolListReformer.m; sourceTree = "<group>"; };
 		E559C5351D0022AD00E118E4 /* SchoolItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolItem.h; sourceTree = "<group>"; };
 		E559C5361D0022AD00E118E4 /* SchoolItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolItem.m; sourceTree = "<group>"; };
-		E57C20571D067BAF0063ABDD /* MethodsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodsMacro.h; sourceTree = "<group>"; };
-		E57C20581D067BD10063ABDD /* YRDGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDGeneral.h; sourceTree = "<group>"; };
 		E57C205A1D067C680063ABDD /* YRDServiceChangable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDServiceChangable.h; sourceTree = "<group>"; };
 		E57C205B1D067C680063ABDD /* YRDServiceChangable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDServiceChangable.m; sourceTree = "<group>"; };
+		E57C205F1D06CB1F0063ABDD /* MethodsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodsMacro.h; sourceTree = "<group>"; };
+		E57C20601D06CB1F0063ABDD /* YRDGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDGeneral.h; sourceTree = "<group>"; };
 		E598AC6A1CEEFAF400294141 /* NSDictionary+YRDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YRDNetworkingMethods.h"; sourceTree = "<group>"; };
 		E598AC6B1CEEFAF400294141 /* NSDictionary+YRDNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YRDNetworkingMethods.m"; sourceTree = "<group>"; };
 		E598AC6D1CEEFB0E00294141 /* NSObject+YRDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YRDNetworkingMethods.h"; sourceTree = "<group>"; };
@@ -204,6 +204,7 @@
 		E5340B0D1C9661AD00205879 /* YRDGoodArc */ = {
 			isa = PBXGroup;
 			children = (
+				E57C205D1D06CB1F0063ABDD /* General */,
 				E598AC621CEDB23300294141 /* Components */,
 				E5340B361C96A72900205879 /* Demos */,
 				E5340B301C969D1200205879 /* Vendors */,
@@ -310,23 +311,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		E57C20551D067BAF0063ABDD /* General */ = {
-			isa = PBXGroup;
-			children = (
-				E57C20561D067BAF0063ABDD /* Macros */,
-				E57C20581D067BD10063ABDD /* YRDGeneral.h */,
-			);
-			path = General;
-			sourceTree = "<group>";
-		};
-		E57C20561D067BAF0063ABDD /* Macros */ = {
-			isa = PBXGroup;
-			children = (
-				E57C20571D067BAF0063ABDD /* MethodsMacro.h */,
-			);
-			path = Macros;
-			sourceTree = "<group>";
-		};
 		E57C20591D067C430063ABDD /* ChangableService */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,10 +320,26 @@
 			path = ChangableService;
 			sourceTree = "<group>";
 		};
+		E57C205D1D06CB1F0063ABDD /* General */ = {
+			isa = PBXGroup;
+			children = (
+				E57C205E1D06CB1F0063ABDD /* Macros */,
+				E57C20601D06CB1F0063ABDD /* YRDGeneral.h */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		E57C205E1D06CB1F0063ABDD /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				E57C205F1D06CB1F0063ABDD /* MethodsMacro.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
 		E598AC621CEDB23300294141 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E57C20551D067BAF0063ABDD /* General */,
 				E598AC631CEDB23300294141 /* HTTP */,
 			);
 			path = Components;
