@@ -61,6 +61,9 @@ static NSString *const kCellID = @"cell";
 #pragma mark - YRDAPIManagerApiCallBackDelegate
 - (void)managerCallAPIDidSuccess:(YRDAPIBaseManager *)manager {
     //数据成功返回
+    if ([manager isMemberOfClass:[YiBaoGaoApiManager class]]) {
+        NSLog(@"YibaoApi");
+    }
     NSArray *arr = [manager fetchDataWithReformer:self.reformer];
     [self.dataSource addObjectsFromArray:arr];
 
